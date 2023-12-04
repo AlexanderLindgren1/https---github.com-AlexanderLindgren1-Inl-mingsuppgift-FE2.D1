@@ -17,19 +17,6 @@ function App() {
   return (
     <div className="App">
 
-      {/* <select id="numbers" onClick={() => {
-
-        let number = document.getElementById("numbers").value
-        return setRegion(number)
-      }}>
-        <option  value={""} selected>default </option>
-        <option value={"africa"} >Afrika</option>
-        <option value={"asia"}>asia</option>
-        <option value={"europe"}>Europa</option>
-
-
-      </select> */}
-
       <div className="Container">
 
         <button onClick={() => setRegion("africa")} >Afrika</button>
