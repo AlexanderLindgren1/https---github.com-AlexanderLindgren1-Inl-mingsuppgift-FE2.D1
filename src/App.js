@@ -1,24 +1,60 @@
-import logo from './logo.svg';
+import { useState } from "react";
 import './App.css';
+import Region from "./compunent/Region";
+import { Footer } from "./compunent/Footer";
+
+
+
 
 function App() {
+
+  let [chooseRegion, setRegion] = useState("africa")
+
+
+  let [chooseenstyle, setchooseenstyle] = useState(false)
+
+  let changebtn = chooseenstyle ? "List" : "Option"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+      {/* <select id="numbers" onClick={() => {
+
+        let number = document.getElementById("numbers").value
+        return setRegion(number)
+      }}>
+        <option  value={""} selected>default </option>
+        <option value={"africa"} >Afrika</option>
+        <option value={"asia"}>asia</option>
+        <option value={"europe"}>Europa</option>
+
+
+      </select> */}
+
+      <div className="Container">
+
+        <button onClick={() => setRegion("africa")} >Afrika</button>
+        <button onClick={() => setRegion("asia")}>asia</button>
+        <button onClick={() => setRegion("europe")}>Europa</button>
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <Region data={chooseRegion} />
+
+      <Footer />
+
+
+    </div >
   );
 }
 
